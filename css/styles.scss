@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+:root{
+    --color-primary: #bf5535;
+    --color-secondary: #f6f3ef;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Merriweather', sans-serif;
+    scroll-behavior: smooth;
+}
+// button
+.adalene-effect{
+    border: 1px solid white;
+    text-transform: none;
+    box-shadow: none;
+    height: 5rem;
+    width: 20rem;
+    &:hover{
+        border: none;
+        background: white !important;
+        color: var(--color-primary);
+    }
+}
+.adalene-effect-reverse{
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    text-transform: none;
+    box-shadow: none;
+    height: 5rem;
+    width: 20rem;
+    &:hover{
+        border: none;
+        background: var(--color-primary) !important;
+        color: white;
+    }
+}
+// website
+.nav-extended{
+    position: fixed;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
+    z-index: 999;
+    transition: top .6s ease-out;
+    top: 0%;
+}
+.sidenav{
+    z-index: 1001;
+}
+.sidenav-overlay{
+    z-index: 1000;
+}
+.nav-wrapper{
+    .brand-logo{
+        font-size: 4rem;
+        font-family: 'Marck Script', sans-serif;
+        color: var(--color-primary);
+        transition: .2s ease-in-out;
+        &:hover{
+            color: black;
+        }
+    }
+    .nav-right{
+        .login{
+            color: var(--color-primary);
+            transition: .3s ease-in-out;
+            &:hover{
+                color: black;
+            }
+        }
+        .cart{
+            font-weight: 700;
+        }
+        a{
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            &:hover{
+                background: transparent;
+            }
+        }
+    }
+    .nav-left{
+        a{
+            width: 3rem;
+            transition: .2s;
+        }
+        a > i{
+            font-size: 1.7rem;
+        }
+        a:hover{
+            background: transparent;
+            color: var(--color-primary);
+        }
+    }
+    a{
+        color: black;
+    }
+}
+.nav-content{
+    width: 50%;
+    .tabs{
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+        .active{
+            color: var(--color-primary);
+        }
+        a{
+            font-weight: 300;
+            text-transform: capitalize;
+            color: black !important;
+            &:hover{
+                color: var(--color-primary) !important;
+            }
+            &:focus{
+                background: transparent;
+            }
+        }
+    }
+}
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: calc(100vh + 11.5rem);
+    &__content{
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 80%;
+        h1{
+            font-family: 'Ubuntu', sans-serif;
+            letter-spacing: .5rem;
+            font-size: 5rem;
+            color: white;
+        }
+        button{
+            margin-top: 1rem;
+        }
+    }
+}
+.best-sellers{
+    margin-top: 8rem;
+    text-align: center;
+    min-height: 100vh;
+    &__title{
+        font-family: 'Ubuntu', sans-serif;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        letter-spacing: .5rem;
+    }
+    &__underline{
+        margin: 0 auto;
+        height: .3rem;
+        width: 2rem;
+        background: black;
+        margin-bottom: 5rem;
+    }
+    &__items{
+        .best-item{
+            &__image{
+                position: relative;
+                display: inline-block;
+                margin-bottom: 1rem;
+                overflow: hidden;
+                cursor: pointer;
+                &--badge{
+                    position: absolute;
+                    min-width: 40%;
+                    top: 0;
+                    left: 0;
+                    background: var(--color-primary);
+                    font-family: sans-serif;
+                    font-weight: 300;
+                    color: white;
+                    letter-spacing: .05rem;
+                    padding: .5rem 1rem;
+                    font-size: 1.4rem;
+                }
+                &--label{
+                    text-align: center;
+                    background: white;
+                    position: absolute;
+                    padding: 1rem 0;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    color: black;
+                    letter-spacing: .15rem;
+                    transition: bottom .3s ease-in-out;
+                    width: 100%;
+                    bottom: -50%;
+                }
+            }
+            &:hover .best-item__image--label{
+                bottom: 0%;
+            }
+            &__title{
+                font-size: 1.3rem;
+                line-height: 2rem;
+            }
+            &__price{
+                font-size: 1.6rem;
+                color: var(--color-primary);
+            }
+        }
+        .fa-chevron-left{
+            position: absolute;
+            top: 45%;
+            left: 1rem;
+            transform: translateY(-50%);
+            color: white;
+            z-index: 1;
+            text-shadow: 0 0 .2rem rgb(0,0,0);
+            cursor: pointer;
+            font-size: 2rem;
+
+        }
+        .fa-chevron-right{
+            position: absolute;
+            top: 45%;
+            right: 1rem;
+            transform: translateY(-50%);
+            color: white;
+            z-index: 1;
+            text-shadow: 0 0 .2rem rgb(0,0,0);
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    }
+    button{
+        margin-top: 5rem;
+    }
+}

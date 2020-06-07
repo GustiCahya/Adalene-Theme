@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adalene</title>
+    <link rel="stylesheet" href="library/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="library/swiper/swiper.min.css">
+    <link rel="stylesheet" href="library/materialize/css/material-icons.css">
+    <link rel="stylesheet" href="library/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="library/swiper/swiper.min.js"></script>
+    <script defer src="library/materialize/js/materialize.min.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-extended white">
+            <div class="nav-wrapper container">
+                <ul class="nav-left left">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+                <a href="#" class="brand-logo center">adalene.</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                <ul class="nav-right right">
+                    <li><a href="#" class="login hide-on-med-and-down">Log in</a></li>
+                    <li><a href="#" class="cart">Cart (0)</a></li>
+                </ul>
+            </div>
+            <div class="nav-content container hide-on-med-and-down">
+                <div class="tabs tabs-transparent center">
+                    <li class="tab"><a href="#">Home</a></li>
+                    <li class="tab"><a href="#">Shop All</a></li>
+                    <li class="tab"><a href="#">Our Story</a></li>
+                    <li class="tab"><a href="#">Our Craft</a></li>
+                    <li class="tab"><a href="#">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+        <ul id="mobile-demo" class="sidenav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop All</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Craft</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+      
+    <main>
+        <section class="hero">
+            <div class="hero__content">
+                <h1>CUE THE COLOR</h1>
+                <button class="btn waves-effect waves-orange transparent adalene-effect">Shop the collection</button>
+            </div>
+        </section>
+        <section class="best-sellers container">
+            <h1 class="best-sellers__title">Best Sellers</h1>
+            <div class="best-sellers__underline"></div>
+            <div class="best-sellers__items swiper-container">
+
+                <div class="best-items swiper-wrapper">
+                    <a href="#" onClick="event.preventDefault()" class="best-item swiper-slide">
+                        <div class="best-item__image">
+                            <div class="best-item__image--badge">
+                                Best Seller
+                            </div>
+                            <img src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="best-item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="best-item__title">I'm a product</p>
+                        <p class="best-item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="best-item swiper-slide">
+                        <div class="best-item__image">
+                            <div class="best-item__image--badge">
+                                Best Seller
+                            </div>
+                            <img src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="best-item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="best-item__title">I'm a product</p>
+                        <p class="best-item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="best-item swiper-slide">
+                        <div class="best-item__image">
+                            <div class="best-item__image--badge">
+                                Best Seller
+                            </div>
+                            <img src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="best-item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="best-item__title">I'm a product</p>
+                        <p class="best-item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="best-item swiper-slide">
+                        <div class="best-item__image">
+                            <div class="best-item__image--badge">
+                                Best Seller
+                            </div>
+                            <img src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="best-item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="best-item__title">I'm a product</p>
+                        <p class="best-item__price">$250.00</p>
+                    </a>
+                </div>
+
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-chevron-right"></i>
+
+            </div>
+            <button class="btn waves-effect transparent adalene-effect-reverse">Shop All Bags</button>
+        </section>
+    </main>
+
+</body>
+</html>
