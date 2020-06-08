@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 :root{
     --color-primary: #bf5535;
     --color-secondary: #f6f3ef;
 }
+// breakpoints
+$bp-small:22.5em; //360px
+$bp-medium:40em; //640px
+$bp-large:50em; //800px
+$bp-xlarge:118.75em; //1900px
 *{
     margin: 0;
     padding: 0;
@@ -12,10 +18,23 @@
 }
 html{
     font-size: 62.5%;
+    @media only screen and (max-width: $bp-small){
+        font-size: 45%;
+    }
+    @media only screen and (max-width: $bp-medium){
+        font-size: 50%;
+    }
+    @media only screen and (max-width: $bp-large){
+        font-size: 55%;
+    }
+    @media only screen and (min-width: $bp-xlarge){
+        font-size: 100%;
+    }
 }
 body{
     font-family: 'Merriweather', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 // button
 .adalene-effect{
@@ -43,7 +62,8 @@ body{
         color: white;
     }
 }
-// website
+
+// header
 .nav-extended{
     position: fixed;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.05);
@@ -105,6 +125,7 @@ body{
 }
 .nav-content{
     width: 50%;
+    transition: .8s ease-out;
     .tabs{
         display: flex;
         justify-content: space-between;
@@ -125,6 +146,7 @@ body{
         }
     }
 }
+//main
 .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/hero.jpg');
     background-size: cover;
@@ -152,8 +174,8 @@ body{
 }
 .best-sellers{
     margin-top: 8rem;
+    margin-bottom: 8rem;
     text-align: center;
-    min-height: 100vh;
     &__title{
         font-family: 'Ubuntu', sans-serif;
         text-transform: uppercase;
@@ -164,6 +186,7 @@ body{
         margin: 0 auto;
         height: .3rem;
         width: 2rem;
+        border-radius: 1rem;
         background: black;
         margin-bottom: 5rem;
     }
@@ -208,6 +231,7 @@ body{
             &__title{
                 font-size: 1.3rem;
                 line-height: 2rem;
+                color: black;
             }
             &__price{
                 font-size: 1.6rem;
@@ -241,4 +265,251 @@ body{
     button{
         margin-top: 5rem;
     }
+}
+.featured{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: $bp-medium){
+        grid-template-columns: repeat(1, 1fr);
+    }
+    grid-auto-rows: 1fr;
+    &__product-1{
+        background: var(--color-secondary);
+        position: relative;
+        text-align: center;
+        cursor:pointer;
+        .product-wrapper{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .3s ease-out;
+            .title{
+                transition: inherit;
+                font-size: 1.3rem;
+                margin-bottom: .5rem;
+            }
+            .price{
+                transition: inherit;
+                font-size: 1.6rem;
+                color: var(--color-primary);
+            }
+            button{
+                opacity: 0;
+                display: inline-block;
+                bottom: 5rem;
+            }
+            &:hover .title{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover .price{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover button{
+                opacity: 1;
+            }
+        }
+    }
+    &__showcase-1{
+        position: relative;
+        h1{
+            font-size: 2.5rem;
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            letter-spacing: .3rem;
+            border-bottom: .2rem solid white;
+        }
+    }
+    &__product-2{
+        background: var(--color-secondary);
+        position: relative;
+        text-align: center;
+        cursor:pointer;
+        .product-wrapper{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: .6s ease-out;
+            img{
+                transition: inherit;
+                margin-bottom: 4rem;
+            }
+            .title{
+                transition: inherit;
+                font-size: 1.3rem;
+                margin-bottom: .5rem;
+            }
+            .price{
+                transition: inherit;
+                font-size: 1.6rem;
+                color: var(--color-primary);
+            }
+            button{
+                opacity: 0;
+                display: inline-block;
+                bottom: 5rem;
+            }
+            &:hover img{
+                transform: scale(1.1) rotate(1deg);
+            }
+            &:hover .title{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover .price{
+                opacity: 0;
+                visibility: hidden;
+            }
+            &:hover button{
+                opacity: 1;
+            }
+        }
+    }
+    &__showcase-2{
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+            url('../images/featured/belt-showcase.jpg') center no-repeat;
+        background-size: cover;
+        position: relative;
+        h1{
+            font-size: 2.5rem;
+            text-align: center;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+            letter-spacing: .3rem;
+            border-bottom: .2rem solid white;
+        }
+    }
+}
+.about{
+    margin-top: 8rem;
+    margin-bottom: 5rem;
+    &-wrapper{
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        .col{
+            margin-bottom: 3rem;
+        }
+    }
+}
+.instagram{
+    background: var(--color-secondary);
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    font-family: 'Marck Script', sans-serif;
+    .title{
+        font-size: 2.5rem;
+        font-family: 'Ubuntu', sans-serif;
+        letter-spacing: .3rem;
+        line-height: 3rem;
+    }
+    .description{
+        display: inline-block;
+        font-size: 2.5rem;
+        margin-bottom: 5rem;
+        color: var(--color-primary);
+        transition: .2s ease-in-out;
+        &:hover{
+            color: black;
+        }
+    }
+    .instagram-photos{
+        overflow: visible;
+    }
+    .features{
+        margin-top: 5rem;
+        color: var(--color-primary);
+        .upperline{
+            margin: 0 auto;
+            height: .3rem;
+            border-radius: .3rem;
+            width: 2rem;
+            background: var(--color-primary);
+        }
+        h3{
+            font-size: 3rem;
+        }
+    }
+}
+// footer
+.contact{
+    margin: 8rem 5rem;
+    margin-bottom: 6rem;
+    .row{
+        align-items: flex-start;
+        .col{
+            text-align: center;
+        }
+        .title {
+            margin-bottom: 2rem;
+            h1{
+                margin-top: 0;
+            }
+            a{
+                font-size: 4rem;
+                font-family: 'Marck Script', sans-serif;
+                color: var(--color-primary);
+                transition: .2s ease-in-out;
+                &:hover{
+                    color: #161616;
+                }
+            }
+        }
+        .links{
+            margin-bottom: 2rem;
+            li{
+                margin-bottom: 2rem;
+            }
+            a{
+                font-size: 1.3rem;
+                color: black;
+            }
+        }
+        .emailing{
+            margin-bottom: 2rem;
+            font-family: 'Ubuntu', sans-serif;
+            form{
+                margin: 0 auto;
+                width: 80%;
+            }
+            h1{
+                margin-top: 0;
+                font-size: 2.5rem;
+                letter-spacing: .5rem;
+            }
+            .input-field{
+                margin-top: 3rem;
+                label{
+                    font-size: 1.6rem;
+                    line-height: .5rem;
+                }
+                input{
+                    font-size: 1.6rem;
+                    margin-bottom: 3rem;
+                }
+            }
+            button{
+                width: 100%;
+            }
+        }
+    }
+}
+.copyright{
+    background: var(--color-secondary);
+    text-align: center;
+    font-size: 1rem;
+    padding: 2rem 0;
 }
