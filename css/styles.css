@@ -511,13 +511,14 @@ body {
   padding-bottom: 5rem;
   text-align: center;
   font-family: 'Marck Script', sans-serif;
+  overflow-x: hidden;
 }
 
 .instagram .title {
   font-size: 2.5rem;
   font-family: 'Ubuntu', sans-serif;
   letter-spacing: .3rem;
-  line-height: 3rem;
+  line-height: 3.5rem;
 }
 
 .instagram .description {
