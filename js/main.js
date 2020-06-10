@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(){
         edge: 'right'
     })
     M.Parallax.init($('.parallax'))
+    M.Collapsible.init($('.collapsible'))
 })
 
 const navbarIntersecting = new IntersectionObserver(function(entries, observer){
@@ -21,7 +22,7 @@ const navbarIntersecting = new IntersectionObserver(function(entries, observer){
 }, {
   threshold: .4
 })
-navbarIntersecting.observe($('.best-sellers'))
+navbarIntersecting.observe($('.best-sellers'));
 
 new Swiper('.best-sellers__items', {
   speed: 400,

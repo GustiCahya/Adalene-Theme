@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>adalene</title>
     <link rel="stylesheet" href="library/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="library/swiper/swiper.min.css">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="library/materialize/css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <script defer src="library/swiper/swiper.min.js"></script>
+    <script defer src="library/nouislider/nouislider.min.js"></script>
     <script defer src="library/materialize/js/materialize.min.js"></script>
     <script defer src="js/main.js"></script>
 </head>
@@ -32,11 +34,11 @@
             </div>
             <div class="nav-content container hide-on-med-and-down">
                 <div class="tabs tabs-transparent center">
-                    <li class="tab"><a href="#">Home</a></li>
-                    <li class="tab"><a href="#">Shop All</a></li>
-                    <li class="tab"><a href="#">Our Story</a></li>
-                    <li class="tab"><a href="#">Our Craft</a></li>
-                    <li class="tab"><a href="#">Contact</a></li>
+                    <li class="tab active"><a href="/">Home</a></li>
+                    <li class="tab"><a href="/pages/shop.page.html">Shop All</a></li>
+                    <li class="tab"><a href="/pages/story.page.html">Our Story</a></li>
+                    <li class="tab"><a href="/pages/craft.page.html">Our Craft</a></li>
+                    <li class="tab"><a href="/pages/contact.page.html">Contact</a></li>
                 </div>
             </div>
         </nav>
@@ -149,13 +151,31 @@
         <section class="about container">
             <div class="about-wrapper row">
                 <div class="col l4 m6 s12">
-                    <img loading="lazy" src="https://dummyimage.com/250x300/000/fff">
+                    <img loading="lazy" src="images/about/about-1.jpg">
+                    <div class="content">
+                        <h2>Family Owned</h2>
+                        <h3>BRAND</h3>
+                        <div class="underline"></div>
+                        <a href="#">Read our story</a>
+                    </div>
                 </div>
                 <div class="col l4 m6 s12">
-                    <img loading="lazy" src="https://dummyimage.com/250x300/000/fff">
+                    <img loading="lazy" src="images/about/about-2.jpg">
+                    <div class="content">
+                        <h2>Hand Crafted</h2>
+                        <h3>PRODUCTS</h3>
+                        <div class="underline"></div>
+                        <a href="#">About our leather</a>
+                    </div>
                 </div>
                 <div class="col l4 m6 s12">
-                    <img loading="lazy" src="https://dummyimage.com/250x300/000/fff">
+                    <img loading="lazy" src="images/about/about-3.jpg">
+                    <div class="content">
+                        <h2>Created in the</h2>
+                        <h3>USA</h3>
+                        <div class="underline"></div>
+                        <a href="#">Read our story</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -201,7 +221,7 @@
         <section class="contact">
             <div class="row">
                 <div class="title col s12 m3 l3">
-                    <h1><a href="#">Adalene.</a></h1>
+                    <h1><a href="#">adalene.</a></h1>
                 </div>
                 <div class="links col s12 m2 l2">
                     <ul>

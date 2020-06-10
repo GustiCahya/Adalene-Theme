@@ -108,6 +108,14 @@ body {
   color: black;
 }
 
+@media only screen and (max-width: 40em) {
+  .nav-wrapper .brand-logo {
+    left: auto !important;
+    -webkit-transform: translateX(0) !important;
+            transform: translateX(0) !important;
+  }
+}
+
 .nav-wrapper .nav-right .login {
   color: var(--color-primary);
   -webkit-transition: .3s ease-in-out;
@@ -146,6 +154,12 @@ body {
   color: var(--color-primary);
 }
 
+@media only screen and (max-width: 40em) {
+  .nav-wrapper .nav-left {
+    display: none;
+  }
+}
+
 .nav-wrapper a {
   color: black;
 }
@@ -166,10 +180,6 @@ body {
   overflow: hidden;
 }
 
-.nav-content .tabs .active {
-  color: var(--color-primary);
-}
-
 .nav-content .tabs a {
   font-weight: 300;
   text-transform: capitalize;
@@ -182,6 +192,10 @@ body {
 
 .nav-content .tabs a:focus {
   background: transparent;
+}
+
+.nav-content .tabs .active a {
+  color: var(--color-primary) !important;
 }
 
 .hero {
@@ -502,7 +516,59 @@ body {
 }
 
 .about-wrapper .col {
+  position: relative;
   margin-bottom: 3rem;
+}
+
+.about-wrapper .col .content-wrapper {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.about-wrapper .col img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-wrapper .col .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+}
+
+.about-wrapper .col .content h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Marck Script', sans-serif;
+}
+
+.about-wrapper .col .content h3 {
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .3rem;
+  padding-bottom: 1rem;
+}
+
+.about-wrapper .col .content .underline {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: .35rem;
+  width: 3rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+}
+
+.about-wrapper .col .content a {
+  display: inline-block;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: .05rem;
+  border-bottom: 2px solid white;
 }
 
 .instagram {
@@ -642,5 +708,398 @@ body {
   text-align: center;
   font-size: 1rem;
   padding: 2rem 0;
+}
+
+.shop-page {
+  padding-top: 13rem;
+  min-height: 100vh;
+}
+
+.shop-page h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.shop-page .filter .collapsible {
+  margin-top: 0;
+  padding: 1rem 2rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
+.shop-page .filter .collapsible h2 {
+  margin-top: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+}
+
+.shop-page .filter .collapsible .filter-list:first-of-type {
+  border-top: 1px solid #ddd;
+}
+
+.shop-page .filter .collapsible .filter-list .collapsible-header {
+  padding-left: 0;
+  padding: 2rem 0;
+  letter-spacing: .1rem;
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shop-page .filter .collapsible .filter-list .collapsible-header i {
+  display: inline-block;
+  margin-left: auto;
+  font-size: 2.5rem;
+}
+
+.shop-page .filter .collapsible .filter-list .collapsible-body {
+  padding-left: 0;
+  font-size: 1.1rem;
+  letter-spacing: .05rem;
+  border-bottom: none;
+}
+
+.shop-page .filter .collapsible .filter-list .collapsible-body label {
+  display: block;
+}
+
+.shop-page .filter .collapsible .collection .active {
+  font-weight: bold;
+}
+
+.shop-page .filter .collapsible .collection a {
+  color: #5f5f5f;
+  letter-spacing: .1rem;
+  line-height: 2rem;
+}
+
+.shop-page .items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(19rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  grid-gap: 3rem;
+}
+
+.shop-page .items .item {
+  display: inline-block;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.shop-page .items .item:last-of-type {
+  margin-bottom: 6rem;
+}
+
+.shop-page .items .item__image {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.shop-page .items .item__image--badge {
+  position: absolute;
+  min-width: 40%;
+  top: 0;
+  left: 0;
+  background: var(--color-primary);
+  font-family: sans-serif;
+  font-weight: 300;
+  color: white;
+  letter-spacing: .05rem;
+  padding: .5rem 1rem;
+  font-size: 1.4rem;
+}
+
+.shop-page .items .item__image--label {
+  text-align: center;
+  background: white;
+  position: absolute;
+  padding: 1rem 0;
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: .15rem;
+  -webkit-transition: bottom .3s ease-in-out;
+  transition: bottom .3s ease-in-out;
+  width: 100%;
+  bottom: -50%;
+}
+
+.shop-page .items .item:hover .item__image--label {
+  bottom: 0%;
+}
+
+.shop-page .items .item__title {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: black;
+}
+
+.shop-page .items .item__price {
+  font-size: 1.6rem;
+  color: var(--color-primary);
+}
+
+.story-page {
+  padding-top: 13rem;
+  min-height: 100vh;
+}
+
+.story-page h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.story-page__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+@media only screen and (max-width: 40em) {
+  .story-page__content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.story-page__content .description {
+  background: var(--color-secondary);
+  position: relative;
+}
+
+.story-page__content .description .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+}
+
+.story-page__content .description .content h1 {
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.story-page__content .description .content .underline {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: .35rem;
+  width: 3rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  background: black;
+  margin-bottom: 2.5rem;
+}
+
+.story-page__content .description .content p {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.craft-page {
+  padding-top: 13rem;
+  min-height: 100vh;
+}
+
+.craft-page h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.craft-page__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+}
+
+@media only screen and (max-width: 40em) {
+  .craft-page__content {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.craft-page__content .description {
+  background: var(--color-secondary);
+  position: relative;
+}
+
+.craft-page__content .description .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+}
+
+.craft-page__content .description .content h1 {
+  margin: 0;
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.craft-page__content .description .content .underline {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: .35rem;
+  width: 3rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  background: black;
+  margin-bottom: 2.5rem;
+}
+
+.craft-page__content .description .content p {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.contact-page {
+  padding-top: 13rem;
+  min-height: 100vh;
+}
+
+.contact-page h1 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: .3rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.contact-page .contacts {
+  background: var(--color-secondary);
+  padding: 8rem 0;
+  text-align: center;
+}
+
+.contact-page .contacts .customer-service {
+  margin-bottom: 8rem;
+}
+
+.contact-page .contacts .customer-service h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: .3rem;
+}
+
+.contact-page .contacts .customer-service .underline {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: .35rem;
+  width: 3rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+  background-color: black;
+}
+
+.contact-page .contacts .customer-service .row h3 {
+  font-family: 'Marck Script';
+  font-size: 3rem;
+  color: var(--color-primary);
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-page .contacts .customer-service .row p {
+  letter-spacing: .1rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+}
+
+.contact-page .contacts .inquiries h2 {
+  font-family: 'Marck Script';
+  font-size: 3rem;
+  color: var(--color-primary);
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-page .contacts .inquiries p {
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  margin-bottom: 6.5rem;
+  line-height: 2rem;
+}
+
+.contact-page .contacts .inquiries form label {
+  font-size: 1.3rem;
+  line-height: .5rem;
+}
+
+.contact-page .contacts .inquiries form input {
+  border-bottom-color: var(--color-primary);
+}
+
+.contact-page .contacts .inquiries form button {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 8rem;
+}
+
+.contact-page .contacts .stockist h2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: .5rem;
+}
+
+.contact-page .contacts .stockist .underline {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  height: .35rem;
+  width: 3rem;
+  border-radius: .1rem;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  background: black;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+
+.contact-page .contacts .stockist .row {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  letter-spacing: .1rem;
+}
+
+.contact-page .contacts .stockist .row:not(:last-of-type) {
+  margin-bottom: 4rem;
 }
 /*# sourceMappingURL=styles.css.map */

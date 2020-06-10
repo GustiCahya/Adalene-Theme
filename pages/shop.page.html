@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>adalene</title>
+    <link rel="stylesheet" href="../library/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../library/swiper/swiper.min.css">
+    <link rel="stylesheet" href="../library/materialize/css/material-icons.css">
+    <link rel="stylesheet" href="../library/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script defer src="../library/swiper/swiper.min.js"></script>
+    <script defer src="library/nouislider/nouislider.min.js"></script>
+    <script defer src="../library/materialize/js/materialize.min.js"></script>
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-extended white">
+            <div class="nav-wrapper container">
+                <ul class="nav-left left">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                </ul>
+                <a href="#" class="brand-logo center">adalene.</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                <ul class="nav-right right">
+                    <li><a href="#" class="login hide-on-med-and-down">Log in</a></li>
+                    <li><a href="#" class="cart">Cart (0)</a></li>
+                </ul>
+            </div>
+            <div class="nav-content container hide-on-med-and-down">
+                <div class="tabs tabs-transparent center">
+                    <li class="tab"><a href="/">Home</a></li>
+                    <li class="tab active"><a href="#">Shop All</a></li>
+                    <li class="tab"><a href="#">Our Story</a></li>
+                    <li class="tab"><a href="#">Our Craft</a></li>
+                    <li class="tab"><a href="#">Contact</a></li>
+                </div>
+            </div>
+        </nav>
+        <ul id="mobile-demo" class="sidenav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop All</a></li>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Our Craft</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="shop-page">
+            <h1>SHOP ALL</h1>
+            <div class="row container">
+                <div class="filter col m3 hide-on-small-and-down">
+                    <ul class="collapsible">
+                        <h2>Filter by</h2>
+                        <li class="filter-list collection">
+                            <div class="collapsible-header">Collection <i class="material-icons">arrow_drop_down</i></div>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a class="active" href="#">All</a></li>
+                                    <li><a href="#">Phone Cases</a></li>
+                                    <li><a href="#">Mini Leather Goods</a></li>
+                                    <li><a href="#">Leather Belts</a></li>
+                                    <li><a href="#">Best Sellers</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="filter-list price">
+                            <div class="collapsible-header">Price <i class="material-icons">arrow_drop_down</i></div>
+                            <div class="collapsible-body">
+                                <p class="range-field">
+                                    <input type="range" min="25" max="400" />
+                                </p>
+                            </div>
+                        </li>
+                        <li class="filter-list model">
+                            <div class="collapsible-header">Model <i class="material-icons">arrow_drop_down</i></div>
+                            <div class="collapsible-body">
+                                <label>
+                                    <input type="checkbox" class="filled-in">
+                                    <span style="color:#5f5f5f; font-size: 1.1rem;">IphoneX</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="filled-in">
+                                    <span style="color:#5f5f5f; font-size: 1.1rem;">IphoneXS</span>
+                                </label>
+                            </div>
+                        </li>
+                        <li class="filter-list size">
+                            <div class="collapsible-header">Size <i class="material-icons">arrow_drop_down</i></div>
+                            <div class="collapsible-body">
+                                <label>
+                                    <input type="checkbox" class="filled-in">
+                                    <span style="color:#5f5f5f; font-size: 1.1rem;">Large</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="filled-in">
+                                    <span style="color:#5f5f5f; font-size: 1.1rem;">Medium</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" class="filled-in">
+                                    <span style="color:#5f5f5f; font-size: 1.1rem;">Small</span>
+                                </label>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="items col s12 m9">
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <div class="item__image--badge">
+                                Best Seller
+                            </div>
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <div class="item__image--badge">
+                                Best Seller
+                            </div>
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                    <a href="#" onClick="event.preventDefault()" class="item">
+                        <div class="item__image">
+                            <div class="item__image--badge">
+                                Best Seller
+                            </div>
+                            <img loading="lazy" src="https://dummyimage.com/200x200/000/fff" alt="product">
+                            <div class="item__image--label">
+                                Quick View
+                            </div>
+                        </div>
+                        <p class="item__title">I'm a product</p>
+                        <p class="item__price">$250.00</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section class="contact">
+            <div class="row">
+                <div class="title col s12 m3 l3">
+                    <h1><a href="#">adalene.</a></h1>
+                </div>
+                <div class="links col s12 m2 l2">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop All</a></li>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Our Craft</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="links col s12 m2 l2">
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Store Policy</a></li>
+                        <li><a href="#">Payment Methods</a></li>
+                        <li><a href="#">Stockists</a></li>
+                    </ul>
+                </div>
+                <div class="links col s12 m2 l2">
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Pinterest</a></li>
+                    </ul>
+                </div>
+                <div class="emailing col s12 m3 l3">
+                    <form action="#" onsubmit="event.preventDefault()">
+                        <h1>JOIN US!</h1>
+                        <div class="input-field">
+                            <input type="email" id="email" class="validate">
+                            <Label for="email">Email</Label>
+                            <button class="btn waves-effect waves-orange transparent adalene-effect-reverse">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="copyright">
+            <p>&copy;2020 remake website theme by Gusti Cahya from Wix.com</p>
+        </section>
+    </footer>
+</body>
+</html>
